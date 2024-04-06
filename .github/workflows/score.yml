@@ -37,7 +37,7 @@ jobs:
           echo "$OUTPUT"
           if [[ `echo "$OUTPUT 0.50" | awk '{print ($1 < $2)}'` == 1 ]]; then echo "Insufficient Accuracy" && exit 1; fi
 
-Train:
+  Train:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -58,7 +58,7 @@ Train:
           echo "Build job Completed Successfully"
           exit 0
     
-Test:
+  Test:
     runs-on: ubuntu-latest
     needs: Train
     steps:
