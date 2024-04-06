@@ -19,6 +19,6 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
-# Run test.py when the container launches
+# Run test.py when the container launches.
 CMD ["python", "test.py"]
 
